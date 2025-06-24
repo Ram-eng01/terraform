@@ -1,5 +1,5 @@
 # resource <resource-type> <resource-name>
-resource "aws_instance" "db" {
+resource "aws_instance" "expense" {
     count = length(var.instance_name)
     ami = var.image_id
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]

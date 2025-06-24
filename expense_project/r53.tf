@@ -1,7 +1,9 @@
 resource "aws_route53_record" "expense" {
-  zone_id = aws_route53_zone.primary.zone_id
-  name    = "www.awsmohan.online"
-  type    = "A"
-  ttl     = 300
-  records = [aws_eip.lb.public_ip]
+    count = length(var.instance_name)
+    zone_id = var.zone_id
+    name    = local.name
+    type = "A"
+    ttl     = 1
+    records =  local.record_value
+    allow_overwrite = true #if records already exists.
 }

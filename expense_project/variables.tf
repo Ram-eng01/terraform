@@ -52,3 +52,13 @@ variable "instance_name" {
     type = list 
     default = ["db","backend","frontend"]
 }
+
+
+#r53 Variabes
+variable "zone_id" {
+    default = "56d cr83rc y3 c92"
+}
+
+variable "domain_name" {
+    default = "awsmohan.online"
+}
