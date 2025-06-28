@@ -110,3 +110,26 @@ variable "database_route_tabe_tags" {
     type = map 
     default = {}
 }
+
+
+#### peering
+
+variable "is_peering_required" {
+    type = bool 
+    default = false
+}
+
+variable "accepter_vpc_id" {
+   type = string 
+   default = ""
+}
+
+variable "peering_tags" {
+   type = map 
+   default = {}
+}
+
+variable "db_subnet_tags" {
+  type = map 
+  default = {}
+}
